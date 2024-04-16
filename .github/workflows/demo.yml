@@ -35,8 +35,7 @@ jobs:
         uses: actions/cache@v3
         with:
           # this is path at which cache of dependancies will be stored
-          path: |
-            - ~/.npm 
+          path: ~/.npm 
           # below is the key and we have given a dynamic name so that it will look for a pacakge-lock.jso which contains deps and if it changes the hask value will also change
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
